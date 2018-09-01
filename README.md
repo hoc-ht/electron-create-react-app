@@ -1,1 +1,1 @@
-# electron-create-react-app
+# Electron + Create React App stater kit
