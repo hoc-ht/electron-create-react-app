@@ -1,0 +1,45 @@
+{
+  "name": "electron-create-react-app",
+  "version": "0.1.0",
+  "description": "Electron with Create React App starter kit",
+  "author": "Hoang Thai Hoc <thaihoc06@gmail.com>",
+  "license": "MIT",
+  "homepage": "./",
+  "main": "public/electron.js",
+  "dependencies": {
+    "electron-is-dev": "^0.3.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "npm run electron-dev",
+    "build": "npm run electron-dist",
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "electron-dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "electron-builder --dir",
+    "electron-dist": "electron-builder",
+    "preelectron-pack": "npm run react-build",
+    "preelectron-dist": "npm run react-build"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "electron": "^2.0.8",
+    "electron-builder": "^20.28.3",
+    "wait-on": "^2.1.0"
+  },
+  "build": {
+    "appId": "com.hocht.electron.cra.starter",
+    "productName": "Electron CRA Starter kit",
+    "files": [
+      "build/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "icon": "public/favicon_app.ico"
+  }
+}
