@@ -5,8 +5,8 @@ You will find some information on how to perform common tasks of create react ap
 
 ## Development server
 
-Run `npm start` for a dev server. The app will automatically reload if you change any of the source files.
+Run `yarn start` for a dev server. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `yarn run build` to build the project. The build artifacts will be stored in the `dist/` directory.
