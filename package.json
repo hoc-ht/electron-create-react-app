@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
-    "electron": "^8.0.2",
+    "electron": "^8.5.2",
     "electron-builder": "^22.3.2",
     "wait-on": "^4.0.1"
   },
