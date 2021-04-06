@@ -11,10 +11,16 @@ let mainWindow;
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({show: false});
+  mainWindow = new BrowserWindow({
+    show: false,
+    icon: path.join(__dirname, './favicon.ico'),
+    webPreferences: {
+      preload: path.join(__dirname, './preload.js'),
+    }
+  });
 
   // load the index.html file of the app
-  mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
+  mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, './index.html')}`);
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
